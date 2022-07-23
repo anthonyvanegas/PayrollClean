@@ -1,2 +1,2 @@
 # PayrollClean
-Private project
+Private project originally meant to automate payroll processes.
