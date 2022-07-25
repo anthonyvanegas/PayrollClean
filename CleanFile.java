@@ -6,14 +6,14 @@ public class CleanFile{
 	/*
 	 * Constructor
 	 */
-	public CleanFile(String fileNameTJP, String fileNameIKI) throws IOException {
+	public CleanFile(String fileNameT, String fileNameI) throws IOException {
 		
 		
-		Clean clean = new Clean(fileNameTJP);
+		Clean clean = new Clean(fileNameT);
 		clean.deleteAllLines(false);
 		clean.cleanStrings();
 		
-		Clean cleanIKI = new Clean(fileNameIKI);
+		Clean cleanIKI = new Clean(fileNameI);
 		cleanIKI.deleteAllLines(true);
 		cleanIKI.cleanStrings();
 	
@@ -24,16 +24,16 @@ public class CleanFile{
 	 */
 	public static void main(String args[]) throws IOException {
 		
-		CleanFile clean = new CleanFile("TJP.csv","IKI.csv");
+		CleanFile clean = new CleanFile("T.csv","I.csv");
 		
-		CollectEntrys tjp = new CollectEntrys("TJP.csv");
+		CollectEntrys tjp = new CollectEntrys("T.csv");
 		
-		CollectEntrys iki = new CollectEntrys("IKI.csv");
+		CollectEntrys iki = new CollectEntrys("I.csv");
 		
-		CleanEntrys cleanTJP = new CleanEntrys("TJP.csv",tjp.getEntArray(), false);
+		CleanEntrys cleanTJP = new CleanEntrys("T.csv",tjp.getEntArray(), false);
 		cleanTJP.toFile("08/18/18 - 08/30/18");
 		
-		CleanEntrys cleanIKI = new CleanEntrys("IKI.csv",iki.getEntArray(), true);
+		CleanEntrys cleanIKI = new CleanEntrys("I.csv",iki.getEntArray(), true);
 		cleanIKI.toFile("08/18/18 - 08/30/18");
 		
 		
