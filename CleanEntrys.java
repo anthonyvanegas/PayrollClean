@@ -120,14 +120,14 @@ public class CleanEntrys extends CollectEntrys{
 		Entry temp;		//Holds temp position in organizing algorithm
 		
 		//Special cases
-		if(isIKI) {
+		if(isI) {
 			
 			for(int i = 0; i < entArr.length; i++) {
 				
-				if(entArr[i].getEmpID() == 9408)
-					entArr[i].setEmpID(408);
-				else if(entArr[i].getEmpID() == 9835)
-					entArr[i].setEmpID(835);
+				if(entArr[i].getEmpID() == 0)			//Removed numbers to censor
+					entArr[i].setEmpID(0);
+				else if(entArr[i].getEmpID() == 0)
+					entArr[i].setEmpID(0);
 				
 			}
 			
