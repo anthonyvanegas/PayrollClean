@@ -11,7 +11,7 @@ public class CleanEntrys extends CollectEntrys{
 	private boolean isIKI;
 	private String fileName;
 	
-	public CleanEntrys(String fileName, Entry[] entArry, boolean isIKI) {
+	public CleanEntrys(String fileName, Entry[] entArry, boolean isI) {
 		
 		//Save params
 		this.fileName = fileName;
@@ -22,7 +22,7 @@ public class CleanEntrys extends CollectEntrys{
 		zeroEntry();
 		
 		//Check differentials
-		if(isIKI)
+		if(isI)
 			differential();
 		
 		//set super class entArr
